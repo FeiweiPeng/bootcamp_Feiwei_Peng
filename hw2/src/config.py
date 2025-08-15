@@ -1,0 +1,8 @@
+from pathlib import Path
+load_dotenv()  # looks for a .env file in the current and parent directories
+print(".env loaded (if present)")
+
+from typing import Optional
+
+def get_key(name: str, default: Optional[str] = None) -> Optional[str]:
+    return os.getenv(name, default)
